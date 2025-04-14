@@ -461,7 +461,7 @@ body {
 }
 
 .personal-base__status {
-    width: 100%;
+    /* width: 100%; */
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -484,6 +484,7 @@ body {
     background-repeat: no-repeat;
     border: none;
     outline: none;
+    display: none;
 }
 
 .personal-base__btn.active {
