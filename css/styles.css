@@ -439,7 +439,8 @@ body {
 
 .personal-base__table {
     overflow: scroll;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    height: 80vh;
 }
 
 .personal-base__header,
@@ -454,6 +455,7 @@ body {
     justify-content: center;
     gap: 10px;
     border: 1px solid #333;
+    background-color: #fff;
     font-size: 16px;
     color: #333;
 }
@@ -510,7 +512,7 @@ body {
 }
 
 [data-column] {
-    min-width: 150px;
+    min-width: 300px;
 }
 
 [data-column].active {
