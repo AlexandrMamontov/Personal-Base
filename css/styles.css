@@ -426,7 +426,7 @@ body {
     margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 .personal-base__input {
@@ -437,10 +437,32 @@ body {
     outline: none;
 }
 
+.personal-base__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.personal-base__box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.personal-base__radio {
+    outline: none;
+}
+
 .personal-base__table {
     overflow: scroll;
     scrollbar-width: thin;
     height: 80vh;
+}
+
+.personal-base__header {
+    position: sticky;
+    top: 0;
 }
 
 .personal-base__header,
@@ -450,7 +472,9 @@ body {
 
 .personal-base__block {
     padding: 8px;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -458,19 +482,24 @@ body {
     background-color: #fff;
     font-size: 16px;
     color: #333;
+    writing-mode: sideways-lr;
 }
 
-.personal-base__status {
-    /* width: 100%; */
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+.personal-base__block.active,
+.personal-base__table.work-status .personal-base__block {
+    flex-direction: row;
+    writing-mode: unset;
+}
+
+.personal-base__block.active .personal-base__status,
+.personal-base__table.work-status .personal-base__status {
     text-align: center;
 }
 
 .personal-base__count {
     padding: 5px;
     border: 1px solid #333;
+    writing-mode: lr;
 }
 
 .personal-base__btn {
@@ -484,7 +513,6 @@ body {
     background-repeat: no-repeat;
     border: none;
     outline: none;
-    display: none;
 }
 
 .personal-base__btn.active {
@@ -497,6 +525,7 @@ body {
 
 .personal-base__cell {
     padding: 8px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -513,9 +542,43 @@ body {
 }
 
 [data-column] {
-    min-width: 300px;
+    min-width: 110px;
 }
 
 [data-column].active {
     min-width: 300px;
+}
+
+[data-column="column1"] {
+    display: none;
+}
+
+.personal-base__table.work-status [data-column="column1"],
+.personal-base__table.work-status [data-column="column2"],
+.personal-base__table.work-status [data-column="column3"],
+.personal-base__table.work-status [data-column="column4"],
+.personal-base__table.work-status [data-column="column5"],
+.personal-base__table.work-status [data-column="column6"],
+.personal-base__table.work-status [data-column="column7"],
+.personal-base__table.work-status [data-column="column8"],
+.personal-base__table.work-status [data-column="column9"],
+.personal-base__table.work-status [data-column="column10"],
+.personal-base__table.work-status [data-column="column11"],
+.personal-base__table.work-status [data-column="column12"],
+.personal-base__table.work-status [data-column="column13"],
+.personal-base__table.work-status [data-column="column14"],
+.personal-base__table.work-status [data-column="column15"] {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .personal-base__table.work-status .personal-base__block {
+        flex-direction: column;
+        writing-mode: sideways-lr;
+    }
+
+    .personal-base__table.work-status .personal-base__block.active {
+        flex-direction: row;
+        writing-mode: unset;
+    }
 }

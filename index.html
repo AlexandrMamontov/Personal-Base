@@ -18,8 +18,18 @@
                 <input type="text" class="personal-base__input" placeholder="Город">
                 <input type="text" class="personal-base__input" placeholder="Менеджер">
                 <input type="text" class="personal-base__input" placeholder="Дата">
+                <div class="personal-base__wrapper">
+                    <div class="personal-base__box">
+                        <input type="radio" id="all-status" name="radio" checked class="personal-base__radio">
+                        <label for="all-status">Все статусы</label>
+                    </div>
+                    <div class="personal-base__box">
+                        <input type="radio" id="work-status" name="radio" class="personal-base__radio">
+                        <label for="work-status">Рабочие статусы</label>
+                    </div>
+                </div>
             </form>
-            <div class="personal-base__table">
+            <div class="personal-base__table all-status">
                 <div class="personal-base__header">
                     <div class="personal-base__block" data-column="column1">
                         <span class="personal-base__status">Предварительный</span>
