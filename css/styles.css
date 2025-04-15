@@ -401,6 +401,13 @@ a {
     text-decoration: none;
 }
 
+button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -475,7 +482,7 @@ body {
     width: 100%;
     display: flex;
     /* flex-direction: column; */
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 10px;
     border: 1px solid #333;
@@ -498,7 +505,7 @@ body {
 
 .personal-base__status {
     width: min-content;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .personal-base__actions {
@@ -517,18 +524,34 @@ body {
 .personal-base__btn {
     min-width: 20px;
     height: 20px;
-    cursor: pointer;
-    background-color: transparent;
+    position: relative;
     background-image: url('https://img.danila-master.ru/uploads/articlesImages/pages/classical-monuments/arrow-pm.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: none;
     outline: none;
+}
+
+.personal-base__btn::before {
+    content: 'развернуть';
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    font-size: 11px;
+    line-height: normal;
+    color: #333;
 }
 
 .personal-base__btn.active {
     transform: rotate(180deg);
+}
+
+.personal-base__btn.active::before {
+    content: 'свернуть';
+    right: auto;
+    left: 20px;
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .personal-base__body:nth-of-type(even) .personal-base__cell {
