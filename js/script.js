@@ -28,8 +28,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     })
-    // if (document.getElementById('all-status').checked) {
-    //     table.classList.remove('work-status');
-    //     table.classList.add('all-status');
-    // }
 })
