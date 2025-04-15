@@ -464,7 +464,7 @@ body {
 .personal-base__table {
     overflow: scroll;
     scrollbar-width: thin;
-    height: 60vh;
+    height: 80vh;
 }
 
 .personal-base__header {
