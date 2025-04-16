@@ -696,4 +696,5 @@ body {
 
 .personal-base__table.work-status [data-column] {
     width: auto;
+    max-width: 190px;
 }
