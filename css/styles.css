@@ -464,7 +464,7 @@ body {
 .personal-base__table {
     overflow: scroll;
     scrollbar-width: thin;
-    height: 80vh;
+    height: 60vh;
 }
 
 .personal-base__header {
@@ -481,54 +481,47 @@ body {
     padding: 8px;
     width: 100%;
     display: flex;
-    /* flex-direction: column; */
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 10px;
     border: 1px solid #333;
-    background-color: #fff;
-    font-size: 16px;
+    background-color: #ccc;
     color: #333;
-    /* writing-mode: sideways-lr; */
-}
-
-/* .personal-base__block.active,
-.personal-base__table.work-status .personal-base__block {
-    flex-direction: row;
-    writing-mode: unset;
-} */
-
-/* .personal-base__block.active .personal-base__status,
-.personal-base__table.work-status .personal-base__status {
-    text-align: center;
-} */
-
-.personal-base__status {
-    width: min-content;
-    /* text-align: center; */
 }
 
 .personal-base__actions {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
+.personal-base__status {
+    width: min-content;
+    font-size: 14px;
+}
+
 .personal-base__count {
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
     border: 1px solid #333;
-    /* writing-mode: lr; */
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    font-size: 14px;
 }
 
 .personal-base__btn {
-    min-width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 21px;
     position: relative;
-    background-image: url('https://img.danila-master.ru/uploads/articlesImages/pages/classical-monuments/arrow-pm.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #e6e6e6;
+    border-radius: 20px;
     outline: none;
 }
 
@@ -536,25 +529,35 @@ body {
     content: 'развернуть';
     position: absolute;
     top: 50%;
-    right: 18px;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 11px;
     line-height: normal;
     color: #333;
 }
 
-.personal-base__btn.active {
-    transform: rotate(180deg);
+.personal-base__btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 30px);
+    transform: translateY(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background-image: url('https://img.danila-master.ru/uploads/articlesImages/pages/main-menu/strelka-black.svg');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .personal-base__btn.active::before {
     content: 'свернуть';
-    right: auto;
-    left: 20px;
-    transform: translateY(-50%) rotate(180deg);
 }
 
-.personal-base__body:nth-of-type(even) .personal-base__cell {
+.personal-base__btn.active::after {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.personal-base__body:nth-of-type(odd) .personal-base__cell {
     background-color: #e9e9e9;
 }
 
@@ -589,10 +592,10 @@ body {
     display: block;
 }
 
-/* [data-column] {
-    min-width: 110px;
-} */
-
+[data-column] {
+    min-width: 200px;
+}
+/* 
 [data-column="column1"] {
     min-width: 200px;
 }
@@ -667,7 +670,7 @@ body {
 
 [data-column="column19"] {
     min-width: 110px;
-}
+} */
 
 [data-column].active {
     min-width: 300px;
@@ -691,14 +694,6 @@ body {
     display: none;
 }
 
-/* @media screen and (max-width: 992px) {
-    .personal-base__table.work-status .personal-base__block {
-        flex-direction: column;
-        writing-mode: sideways-lr;
-    }
-
-    .personal-base__table.work-status .personal-base__block.active {
-        flex-direction: row;
-        writing-mode: unset;
-    }
-} */
+.personal-base__table.work-status [data-column] {
+    width: auto;
+}
