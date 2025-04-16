@@ -499,7 +499,7 @@ body {
 }
 
 .personal-base__status {
-    width: min-content;
+    font-weight: bold;
     font-size: 14px;
 }
 
@@ -593,7 +593,7 @@ body {
 }
 
 [data-column] {
-    min-width: 200px;
+    min-width: 190px;
 }
 /* 
 [data-column="column1"] {
