@@ -478,12 +478,12 @@ body {
 }
 
 .personal-base__block {
-    padding: 8px;
+    padding: 4px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
     border: 1px solid #333;
     background-color: #ccc;
@@ -493,32 +493,63 @@ body {
 .personal-base__actions {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 10px;
+    gap: 5px;
+}
+
+.personal-base__block.active .personal-base__actions {
+    align-items: center;
 }
 
 .personal-base__status {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.personal-base__block[data-column="column1"] .personal-base__status,
+.personal-base__block[data-column="column16"] .personal-base__status {
+    font-size: 7px;
+}
+
+.personal-base__block[data-column="column3"] .personal-base__status,
+.personal-base__block[data-column="column4"] .personal-base__status,
+.personal-base__block[data-column="column5"] .personal-base__status,
+.personal-base__block[data-column="column8"] .personal-base__status,
+.personal-base__block[data-column="column10"] .personal-base__status,
+.personal-base__block[data-column="column11"] .personal-base__status,
+.personal-base__block[data-column="column12"] .personal-base__status,
+.personal-base__block[data-column="column13"] .personal-base__status,
+.personal-base__block[data-column="column14"] .personal-base__status {
+    font-size: 9px;
+}
+
+.personal-base__block.active .personal-base__status {
+    font-size: 12px;
 }
 
 .personal-base__count {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     background-color: #fff;
     border: 1px solid #333;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
+    font-size: 9px;
+}
+
+.personal-base__block.active .personal-base__count {
+    width: 30px;
+    height: 30px;
     font-size: 14px;
 }
 
 .personal-base__btn {
     width: 100%;
-    height: 21px;
+    height: 17px;
     position: relative;
     background-color: #e6e6e6;
     border-radius: 20px;
@@ -531,7 +562,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 11px;
+    font-size: 9px;
     line-height: normal;
     color: #333;
 }
@@ -540,10 +571,10 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    left: calc(50% + 30px);
+    left: calc(50% + 25px);
     transform: translateY(-50%) rotate(45deg);
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     background-image: url('https://img.danila-master.ru/uploads/articlesImages/pages/main-menu/strelka-black.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -557,10 +588,6 @@ body {
     transform: translateY(-50%) rotate(-90deg);
 }
 
-.personal-base__body:nth-of-type(odd) .personal-base__cell {
-    background-color: #e9e9e9;
-}
-
 .personal-base__cell {
     padding: 8px;
     width: 100%;
@@ -571,6 +598,24 @@ body {
     gap: 10px;
     border: 1px solid #333;
     text-align: center;
+}
+
+.personal-base__cell[data-column="column1"],
+.personal-base__cell[data-column="column2"],
+.personal-base__cell[data-column="column3"],
+.personal-base__cell[data-column="column4"],
+.personal-base__cell[data-column="column5"],
+.personal-base__cell[data-column="column6"],
+.personal-base__cell[data-column="column7"],
+.personal-base__cell[data-column="column8"],
+.personal-base__cell[data-column="column9"],
+.personal-base__cell[data-column="column10"],
+.personal-base__cell[data-column="column11"],
+.personal-base__cell[data-column="column12"],
+.personal-base__cell[data-column="column13"],
+.personal-base__cell[data-column="column14"],
+.personal-base__cell[data-column="column15"] {
+    background-color: #e6e6e6;
 }
 
 .personal-base__cell * {
@@ -593,84 +638,8 @@ body {
 }
 
 [data-column] {
-    min-width: 190px;
+    min-width: 100px;
 }
-/* 
-[data-column="column1"] {
-    min-width: 200px;
-}
-
-[data-column="column2"] {
-    min-width: 120px;
-}
-
-[data-column="column3"] {
-    min-width: 145px;
-}
-
-[data-column="column4"] {
-    min-width: 165px;
-}
-
-[data-column="column5"] {
-    min-width: 140px;
-}
-
-[data-column="column6"] {
-    min-width: 135px;
-}
-
-[data-column="column7"] {
-    min-width: 120px;
-}
-
-[data-column="column8"] {
-    min-width: 215px;
-}
-
-[data-column="column9"] {
-    min-width: 120px;
-}
-
-[data-column="column10"] {
-    min-width: 140px;
-}
-
-[data-column="column11"] {
-    min-width: 155px;
-}
-
-[data-column="column12"] {
-    min-width: 145px;
-}
-
-[data-column="column13"] {
-    min-width: 160px;
-}
-
-[data-column="column14"] {
-    min-width: 150px;
-}
-
-[data-column="column15"] {
-    min-width: 115px;
-}
-
-[data-column="column16"] {
-    min-width: 175px;
-}
-
-[data-column="column17"] {
-    min-width: 130px;
-}
-
-[data-column="column18"] {
-    min-width: 140px;
-}
-
-[data-column="column19"] {
-    min-width: 110px;
-} */
 
 [data-column].active {
     min-width: 300px;
@@ -697,4 +666,23 @@ body {
 .personal-base__table.work-status [data-column] {
     width: auto;
     max-width: 190px;
+    min-width: 190px;
+}
+
+.personal-base__table.work-status [data-column].active {
+    min-width: 300px;
+}
+
+.personal-base__table.work-status .personal-base__actions {
+    align-items: center;
+}
+
+.personal-base__table.work-status .personal-base__status {
+    font-size: 12px;
+}
+
+.personal-base__table.work-status .personal-base__count {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
 }
