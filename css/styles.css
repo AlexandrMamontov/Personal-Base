@@ -510,12 +510,12 @@ body {
     word-break: break-word;
 }
 
-/* .personal-base__block[data-column="column1"] .personal-base__status,
+.personal-base__block[data-column="column1"] .personal-base__status,
 .personal-base__block[data-column="column16"] .personal-base__status {
-    font-size: 7px;
+    font-size: 9px;
 }
 
-.personal-base__block[data-column="column3"] .personal-base__status,
+/* .personal-base__block[data-column="column3"] .personal-base__status,
 .personal-base__block[data-column="column4"] .personal-base__status,
 .personal-base__block[data-column="column5"] .personal-base__status,
 .personal-base__block[data-column="column8"] .personal-base__status,
