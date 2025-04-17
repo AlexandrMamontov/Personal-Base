@@ -532,6 +532,7 @@ body {
 }
 
 .personal-base__count {
+    margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
