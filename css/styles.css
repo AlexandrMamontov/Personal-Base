@@ -493,7 +493,7 @@ body {
 .personal-base__actions {
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 5px;
 }
@@ -505,9 +505,12 @@ body {
 .personal-base__status {
     font-weight: bold;
     font-size: 12px;
+    /* font-size: 9px; */
+    text-align: center;
+    word-break: break-word;
 }
 
-.personal-base__block[data-column="column1"] .personal-base__status,
+/* .personal-base__block[data-column="column1"] .personal-base__status,
 .personal-base__block[data-column="column16"] .personal-base__status {
     font-size: 7px;
 }
@@ -522,7 +525,7 @@ body {
 .personal-base__block[data-column="column13"] .personal-base__status,
 .personal-base__block[data-column="column14"] .personal-base__status {
     font-size: 9px;
-}
+} */
 
 .personal-base__block.active .personal-base__status {
     font-size: 12px;
@@ -532,7 +535,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 22px;
+    min-width: 22px;
     height: 22px;
     background-color: #fff;
     border: 1px solid #333;
@@ -542,7 +545,7 @@ body {
 }
 
 .personal-base__block.active .personal-base__count {
-    width: 30px;
+    min-width: 30px;
     height: 30px;
     font-size: 14px;
 }
@@ -557,12 +560,12 @@ body {
 }
 
 .personal-base__btn::before {
-    content: 'развернуть';
+    content: 'открыть';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: calc(50% - 2px);
     transform: translate(-50%, -50%);
-    font-size: 9px;
+    font-size: 12px;
     line-height: normal;
     color: #333;
 }
@@ -571,17 +574,17 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    left: calc(50% + 25px);
+    left: calc(50% + 21px);
     transform: translateY(-50%) rotate(45deg);
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background-image: url('https://img.danila-master.ru/uploads/articlesImages/pages/main-menu/strelka-black.svg');
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .personal-base__btn.active::before {
-    content: 'свернуть';
+    content: 'закрыть';
 }
 
 .personal-base__btn.active::after {
@@ -597,7 +600,12 @@ body {
     justify-content: center;
     gap: 10px;
     border: 1px solid #333;
+    font-size: 12px;
     text-align: center;
+}
+
+.personal-base__cell.active {
+    font-size: 16px;
 }
 
 .personal-base__cell[data-column="column1"],
@@ -638,7 +646,7 @@ body {
 }
 
 [data-column] {
-    min-width: 100px;
+    min-width: calc(100% / 19);
 }
 
 [data-column].active {
@@ -682,7 +690,7 @@ body {
 }
 
 .personal-base__table.work-status .personal-base__count {
-    width: 30px;
+    min-width: 30px;
     height: 30px;
     font-size: 14px;
 }
