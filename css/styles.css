@@ -505,7 +505,6 @@ body {
 .personal-base__status {
     font-weight: bold;
     font-size: 12px;
-    /* font-size: 9px; */
     text-align: center;
     word-break: break-word;
 }
@@ -514,18 +513,6 @@ body {
 .personal-base__block[data-column="column16"] .personal-base__status {
     font-size: 9px;
 }
-
-/* .personal-base__block[data-column="column3"] .personal-base__status,
-.personal-base__block[data-column="column4"] .personal-base__status,
-.personal-base__block[data-column="column5"] .personal-base__status,
-.personal-base__block[data-column="column8"] .personal-base__status,
-.personal-base__block[data-column="column10"] .personal-base__status,
-.personal-base__block[data-column="column11"] .personal-base__status,
-.personal-base__block[data-column="column12"] .personal-base__status,
-.personal-base__block[data-column="column13"] .personal-base__status,
-.personal-base__block[data-column="column14"] .personal-base__status {
-    font-size: 9px;
-} */
 
 .personal-base__block.active .personal-base__status {
     font-size: 12px;
@@ -536,25 +523,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* min-width: 22px;
-    height: 22px; */
     padding: 1px;
     width: 70px;
     background-color: #fff;
     border: 1px solid #333;
     border-radius: 10px;
-    /* aspect-ratio: 1 / 1; */
     font-size: 9px;
 }
 
 .personal-base__block.active .personal-base__count {
-    /* min-width: 30px;
-    height: 30px; */
     font-size: 14px;
 }
 
 .personal-base__btn {
-    /* width: 100%; */
     width: 70px;
     height: 17px;
     position: relative;
@@ -694,7 +675,5 @@ body {
 }
 
 .personal-base__table.work-status .personal-base__count {
-    /* min-width: 30px;
-    height: 30px; */
     font-size: 14px;
 }

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // кнопки раскрытия столбцов
+    // Alex кнопки раскрытия столбцов
     const headerBlocks = document.querySelectorAll('.personal-base__block');
     headerBlocks.forEach((headerBlock) => {
         const headerBtn = headerBlock.querySelector('.personal-base__btn');
-        // при клике на кнопку разворачивается/сворачивается соответсвтующий столбец
+        // Alex при клике на кнопку разворачивается/сворачивается соответсвтующий столбец
         headerBtn.addEventListener('click', function() {
             const value = headerBlock.dataset.column;
             const cells = document.querySelectorAll(`.personal-base__cell[data-column="${value}"]`);
@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
 
-    // радиокнопки
+    // Alex радиокнопки
     const radioButtons = document.querySelectorAll('.personal-base__radio');
     const table = document.querySelector('.personal-base__table');
     const headerBtns = document.querySelectorAll('.personal-base__btn');
     const cells2 = document.querySelectorAll('.personal-base__cell');
     radioButtons.forEach((radio) => {
         radio.addEventListener('change', function() {
-            // при клике на "все статусы" отображаются все столбцы, при этом все столбцы будут в свёрнутом виде
+            // Alex при клике на "все статусы" отображаются все столбцы, при этом все столбцы будут в свёрнутом виде
             if (this.id === 'all-status') {
                 table.classList.remove('work-status');
                 table.classList.add('all-status');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     headerBtn.classList.remove('active');
                 });
             } else if (this.id === 'work-status') {
-                // при клике на "рабочие статусы" отображаются только последние 4 столбца, при этом все они будут в развёрнутом виде
+                // Alex при клике на "рабочие статусы" отображаются только последние 4 столбца, при этом все они будут в развёрнутом виде
                 table.classList.remove('all-status');
                 table.classList.add('work-status');
                 headerBlocks.forEach((headerBlock) => {
